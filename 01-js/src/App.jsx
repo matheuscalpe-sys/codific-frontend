@@ -1,7 +1,56 @@
 import './App.css'
 
 function App() {
-  
+ 
+  function capitao(){
+    let gastos = Number(prompt("quais foram seus gastos? "))
+    let lucro1 = Number(prompt("quais foram seus lucros com os ingressos? "))
+    let lucro2 = Number(prompt("quais foram seus lucros com os itens? "))
+
+    let lucroGeral = lucro1 + lucro2 - gastos
+    let percentual = lucroGeral / gastos * 100
+
+    alert("seu lucro foi " + lucroGeral)
+    alert("seu lucro percentual foi " + percentual)
+  }
+  function faturamento(){
+    let bruto = Number(prompt("lucro bruto: "))
+    let presentes = Number(prompt("gasto em presentes: "))
+    let premiações = Number(prompt("gasto em premiações: "))
+    let suborno = Number(prompt("gasto em suborno: "))
+
+    let lucro = bruto - presentes - premiações - suborno
+
+    alert("seu lucro foi: " + lucro.toFixed(2))
+
+  }
+  function frete(){
+    let distancia = Number(prompt("qual a distancia para a encomenda? "))
+    let peso = Number(prompt("qual o peso da encomenda? "))
+    let volume = Number(prompt("qual o volume da encomenda? "))
+
+    let frete = 15 + (2*peso) + (0,5*distancia) + (10*volume)
+
+    alert(`o valor do frete é: ${frete}`)
+  }
+
+//bloco A abaixo e bloco B acima ('-')
+
+  function monika(){
+    let vezes = Number(prompt("quantas vezes o candidato mexeu no celular? "))
+
+    let chance = (0.1/(1 + 500 * vezes)) * 100
+
+    alert(`as chances do canditato passar são: ${chance}`)
+  }
+  function caminhao(){
+    let pesoBruto = Number(prompt("qual é o peso total? "))
+    let tara = Number(prompt("qual é o peso do caminhão sem a carga? "))
+
+    let carga = pesoBruto - tara
+
+    alert("o peso da carga é: " + carga)
+  }
   function salario(){
     let mes = Number(prompt("quanto é seu salario mensal? "))
     let dias = Number(prompt("quantos dias vc trabalhou? "))
@@ -81,6 +130,11 @@ function App() {
 <button onClick={pomar}>trajeto pomar</button>
 <button onClick={pernambuco}>Custos da igreja</button>
 <button onClick={salario}>Salario</button>
+<button onClick={caminhao}>Peso do caminhão</button>
+<button onClick={monika}>Chance dos candidatos</button>
+<button onClick={frete}>Valor do frete</button>
+<button onClick={faturamento}>Faturamento casa de apostas</button>
+<button onClick={capitao}>Faturamento do capitão ganso</button>
 
     <hr />
     <button onClick={testar}>Testar</button>
