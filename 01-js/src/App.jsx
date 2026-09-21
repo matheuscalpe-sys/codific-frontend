@@ -2,6 +2,38 @@ import './App.css'
 
 function App() {
  
+  function romero(){
+  let obras = Number(prompt("Qual o valor da obra?"))
+  
+  let valor = obras * 3
+
+  alert("o valor da obra com os lucros do vendedor é " + valor)
+  }
+  function juca(){
+    let salario = 5000
+    let moradia = Number(prompt("quanto é o custo de moradia? "))
+    let agua = Number(prompt("quanto é o custo de agua? "))
+    let luz = Number(prompt("quanto é o custo de luz? "))
+    let internet = Number(prompt("quanto é o custo de internet? "))
+    let gasolina = Number(prompt("quanto é o custo de gasolina? "))
+    let streamings = Number(prompt("quanto é o custo de streamings? "))
+    let telefone = Number(prompt("quanto é o custo de telefone? "))
+    let outros = Number(prompt("quanto é o custo de outros? "))
+
+    let despesas = salario - moradia - agua - luz - internet - gasolina - streamings - telefone - outros
+    alert("sobras do seu suado salario " + despesas)
+  }
+  function sarumano(){
+    let bombas = 7
+    let shows = Number(prompt("quantos shows sarumano ira fazer?"))
+
+    let quantidade = bombas * shows
+    let valorBombas = 11
+    let valorMob = bombas * valorBombas
+
+    alert("Sarumano precisa comprar " + quantidade + " bombas")
+    alert("ele gastara " + valorMob)
+  }
   function capitao(){
     let gastos = Number(prompt("quais foram seus gastos? "))
     let lucro1 = Number(prompt("quais foram seus lucros com os ingressos? "))
@@ -135,6 +167,9 @@ function App() {
 <button onClick={frete}>Valor do frete</button>
 <button onClick={faturamento}>Faturamento casa de apostas</button>
 <button onClick={capitao}>Faturamento do capitão ganso</button>
+<button onClick={sarumano}>Suprimentos do sarumano</button>
+<button onClick={juca}>despesas do juca</button>
+<button onClick={romero}>valor da obra</button>
 
     <hr />
     <button onClick={testar}>Testar</button>
