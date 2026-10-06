@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import './App.css'
 
 function App() {
- 
+  const[resultado, setResultado] = useState(0)
+
   function romero(){
   let obras = Number(prompt("Qual o valor da obra?"))
   
@@ -149,10 +151,27 @@ function App() {
     alert("sua nota final é: " + media)
   }
 
+
+  function calcularDobro(){
+    let numero = Number(prompt("GIDITE SEU NUMERO AROGA"))
+    let dobro
+  }
+
   return (
    <div className="cont-app">
 
     <h1>JAVA(script) NO REACTO</h1>
+
+    <hr />
+
+    <h2>usando estados</h2>
+    <button onClick={calcularDobro}>estados - dobro</button>
+
+    <p>
+      resultado da operação:{resultado}
+    </p>
+
+    <hr />
 
     <h2>EXERCICIOS meio MANEIROS</h2>
 

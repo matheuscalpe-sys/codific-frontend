@@ -1,4 +1,11 @@
 import './main.css'
+import servicoCard from '../ServicoCard/servicoCard'
+
+const servicos = [
+    {id:1 , icone:"⭐", titulo: "design de interfaces", descricao: "Telas claras pensadas para o usuarios" },
+    {id:2, icone:"⭐", titulo: "design de interfaces" , descricao: "Telas claras pensadas para o usuarios" },
+    {id:3 , icone:"⭐" , titulo: "design de interfaces" , descricao: "Telas claras pensadas para o usuarios" },
+]
 
 function main(){
     return(
